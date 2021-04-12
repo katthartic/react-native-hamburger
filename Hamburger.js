@@ -50,6 +50,7 @@ export default class Hamburger extends Component {
                 toValue: 4
             }).start();
             Animated.timing(this.middleBarOpacity, {
+                useNativeDriver: true,
                 toValue: 1,
                 duration: 600
             }).start();
@@ -68,6 +69,7 @@ export default class Hamburger extends Component {
                 toValue: -10
             }).start();
             Animated.timing(this.middleBarOpacity, {
+                useNativeDriver: true,
                 toValue: 0,
                 duration: 30
             }).start();
