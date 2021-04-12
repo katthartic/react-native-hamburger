@@ -60,12 +60,15 @@ export default class Hamburger extends Component {
     cross() {
         if (!this.state.active) {
             Animated.spring(this.topBar, {
+                useNativeDriver: true,
                 toValue: .9
             }).start();
             Animated.spring(this.bottomBar, {
+                useNativeDriver: true,
                 toValue: .9
             }).start();
             Animated.spring(this.bottomBarMargin, {
+                useNativeDriver: true,
                 toValue: -10
             }).start();
             Animated.timing(this.middleBarOpacity, {
@@ -78,15 +81,19 @@ export default class Hamburger extends Component {
                 active: false
             });
             Animated.spring(this.topBar, {
+                useNativeDriver: true,
                 toValue: 0
             }).start();
             Animated.spring(this.bottomBar, {
+                useNativeDriver: true,
                 toValue: 0
             }).start();
             Animated.spring(this.bottomBarMargin, {
+                useNativeDriver: true,
                 toValue: 4
             }).start();
             Animated.spring(this.middleBarOpacity, {
+                useNativeDriver: true,
                 toValue: 1,
                 duration: 1200
             }).start();
